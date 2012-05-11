@@ -29,20 +29,20 @@ secondEl.appendChild(thirdEl);
 var fourthEl = doc.createElement('div');
 
 fourthEl.attributes.id = 'fourth';
-fourthEl.innerHtml = '<h1 id="h1" class=hi>fourth</h1>';
+fourthEl.innerHTML = '<h1 id="h1" class=hi>fourth</h1>';
 
 firstEl.appendChild(fourthEl)
 
-console.log('innerHtml: "%s"\nouterHtml: "%s"\ntextContent: "%s"', doc.innerHtml, doc.outerHtml, doc.textContent);
+console.log('innerHtml: "%s"\nouterHtml: "%s"\ntextContent: "%s"', doc.innerHTML, doc.outerHTML, doc.textContent);
 
-secondEl.outerHtml = '<span id="2" disabled>second</span>';
+secondEl.outerHTML = '<span id="2" disabled>second</span>';
 
-console.log('innerHtml: "%s"\nouterHtml: "%s"\ntextContent: "%s"', doc.innerHtml, doc.outerHtml, doc.textContent);
+console.log('innerHtml: "%s"\nouterHtml: "%s"\ntextContent: "%s"', doc.innerHTML, doc.outerHTML, doc.textContent);
 
 console.log('\n===================Script===================\n');
 
 doc = new html.Document();
 
-doc.innerHtml = "<script>console.log('<div />');</script>";
+doc.innerHTML = "<script>console.log('<div />');</script>";
 
 console.log('innerHtml: "%s"\nouterHtml: "%s"\ntextContent: "%s"', doc.innerHtml, doc.outerHtml, doc.textContent);
