@@ -45,4 +45,20 @@ doc = new html.Document();
 
 doc.innerHTML = "<script>console.log('<div />');</script>";
 
-console.log('innerHtml: "%s"\nouterHtml: "%s"\ntextContent: "%s"', doc.innerHtml, doc.outerHtml, doc.textContent);
+console.log('innerHtml: "%s"\nouterHtml: "%s"\ntextContent: "%s"', doc.innerHTML, doc.outerHTML, doc.textContent);
+
+console.log('\n===================Comment===================\n');
+
+doc = new html.Document();
+
+doc.innerHTML = "hello<!-- hi -->";
+
+console.log('innerHtml: "%s"\nouterHtml: "%s"\ntextContent: "%s"', doc.innerHTML, doc.outerHTML, doc.textContent);
+
+console.log('\n===================Script Comment===================\n');
+
+doc = new html.Document();
+
+doc.innerHTML = "<script><!-- hi --></script>";
+
+console.log('input: "%s"\ninnerHtml: "%s"\nouterHtml: "%s"\ntextContent: "%s"', "<script><!-- hi --></script>", doc.innerHTML, doc.outerHTML, doc.textContent);
