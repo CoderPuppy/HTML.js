@@ -1,1 +1,1 @@
-node test.js > test.output 2>test.error
+node test.js $* > test.output 2>test.error
