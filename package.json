@@ -1,7 +1,9 @@
 {
-	"name": "HTML.js",
+	"name": "html",
+	"description": "A DOM implementation, HTML parser, renderer and executer.",
 	"version": "0.0.0",
 	"private": true,
+	"main": "lib/index.js",
 	"dependencies": {
 		
 	}
