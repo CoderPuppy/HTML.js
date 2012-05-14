@@ -15,7 +15,7 @@ fs.readdir(__dirname, function(err, files) {
 	files.filter(function(file) {
 		return file && /\.js$/.test(file) && file !== 'test.js' && ignoreFiles.indexOf(file) === -1;
 	}).filter(function(file) {
-		return typeof(run) === 'object' && run.indexOf(file.replace(/\.js$/, '')) >= 0;
+		return typeof(run) === 'object' ? run.indexOf(file.replace(/\.js$/, '')) >= 0 : true;
 	}).forEach(function(name) {
 		var test, tests, testName;
 		console.log('\n==================Running %s=====================', name.replace(/\.js$/, ''));

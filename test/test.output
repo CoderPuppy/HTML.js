@@ -13,9 +13,37 @@
 
 ==================Running script=====================
 
-===================Script "<script>document.getElementsByTagName('body')[0].appendChild(document.createElement('div')).innerHTML = '<b>hi</b>';</script>"=======================
+===================Script "<script>document.getElementsByTagName('body')[0].appendChild(document.createElement('div')).innerHTML = '<b>hi</b>';console.log(document.getElementsByTagName('div'));</script>"=======================
 
-<!doctype html><html><head><script>document.getElementsByTagName('body')[0].appendChild(document.createElement('div')).innerHTML = '<b>hi</b>';</script></head><body /></html>
+LOG: [ { type: 'element',
+    nodes: [ [Object] ],
+    childNodes: [Getter],
+    tag: 'DIV',
+    attributes: {},
+    tagSpec: { inBody: true },
+    tagName: [Getter],
+    outerHTML: [Getter/Setter],
+    innerHTML: [Getter/Setter],
+    textContent: [Getter/Setter],
+    innerText: [Getter/Setter],
+    outerText: [Getter],
+    children: [Getter],
+    parentNode: 
+     { type: 'element',
+       nodes: [Object],
+       childNodes: [Getter],
+       tag: 'BODY',
+       attributes: {},
+       tagSpec: [Object],
+       tagName: [Getter],
+       outerHTML: [Getter/Setter],
+       innerHTML: [Getter/Setter],
+       textContent: [Getter/Setter],
+       innerText: [Getter/Setter],
+       outerText: [Getter],
+       children: [Getter],
+       parentNode: [Object] } } ]
+<!doctype html><html><head><script>document.getElementsByTagName('body')[0].appendChild(document.createElement('div')).innerHTML = '<b>hi</b>';console.log(document.getElementsByTagName('div'));</script></head><body><div><b>hi</b></div></body></html>
 
 ==================Done Running script=====================
 
