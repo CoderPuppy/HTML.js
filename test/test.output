@@ -11,11 +11,19 @@
 
 ==================Done Running arrange=====================
 
+==================Running script=====================
+
+===================Script "<script>document.getElementsByTagName('body')[0].appendChild(document.createElement('div')).innerHTML = '<b>hi</b>';</script>"=======================
+
+<!doctype html><html><head><script>document.getElementsByTagName('body')[0].appendChild(document.createElement('div')).innerHTML = '<b>hi</b>';</script></head><body /></html>
+
+==================Done Running script=====================
+
 ==================Running doctype=====================
 
 ===================DocType "<!DOCTYPE html><html />"=======================
 
-<!doctype html><html /><head /><body /></html>
+<!doctype html><html><head /><body /></html>
 
 ===================DocType ""=======================
 
