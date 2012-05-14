@@ -17,12 +17,11 @@ fs.readdir(__dirname, function(err, files) {
 	}).filter(function(file) {
 		return typeof(run) === 'object' ? run.indexOf(file.replace(/\.js$/, '')) >= 0 : true;
 	}).forEach(function(name) {
-		var test, tests, testName;
-		console.log('\n==================Running %s=====================', name.replace(/\.js$/, ''));
+		var test = require(path.join(__dirname, name.replace(/\.js$/, ''))),
+			tests = test.tests,
+			testName = test.name;
 		
-		test = require(path.join(__dirname, name.replace(/\.js$/, '')));
-		tests = test.tests;
-		testName = test.name;
+		console.log('\n==================Running %s=====================', testName);
 		
 		if(tests) {
 			tests.filter(Boolean).forEach(function(test) {
