@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="HTML.js : A DOM implementation and a html parser" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>HTML.js</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/drewyoung1/HTML.js">View on GitHub</a>
+
+          <h1 id="project_title">HTML.js</h1>
+          <h2 id="project_tagline">A DOM implementation and a html parser</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/drewyoung1/HTML.js/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/drewyoung1/HTML.js/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>A basic DOM implementation that includes a HTML parser and a Plugin API</h3>
+
+<p>Just require it <code>require('html')</code></p>
+
+<p>Then create a Document <code>new html.Document('You html')</code></p>
+
+<p>That just has a DOM API</p>
+
+<p>You can <code>document.createElement('div' || 'you tag name')</code></p>
+
+<p>To use plugins you just create a document passing in another argument: what plugins you want loaded.</p>
+
+<p>And to write your own plugins:</p>
+
+<div class="highlight">
+<pre><span class="nx">html</span><span class="p">.</span><span class="nx">plugins</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">'plugin name'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">plugin</span><span class="p">)</span> <span class="p">{</span>
+     <span class="c1">// You plugin here</span>
+     <span class="c1">// You can register tags</span>
+     <span class="nx">plugin</span><span class="p">.</span><span class="nx">tags</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">'tag name'</span><span class="p">,</span> <span class="p">{</span> <span class="c1">// Tag Spec</span>
+          <span class="nx">endTag</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span> <span class="c1">// do we need an end tag ( if false do not even look for one )</span>
+          <span class="nx">html</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span> <span class="c1">// can we have html inside of this tag</span>
+          <span class="nx">comments</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span> <span class="c1">// can we have comments inside of this tag</span>
+          <span class="nx">create</span><span class="o">:</span> <span class="nb">Function</span><span class="p">,</span> <span class="c1">// this is run on any new elements</span>
+          <span class="nx">prototype</span><span class="o">:</span> <span class="nb">Object</span> <span class="c1">// this is applied as a prototype on new elements</span>
+      <span class="p">});</span>
+
+      <span class="c1">// or new ways to add integrate</span>
+      <span class="nx">plugins</span><span class="p">.</span><span class="nx">activators</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">'type'</span><span class="p">,</span> <span class="p">{</span>
+          <span class="nx">activate</span><span class="o">:</span> <span class="nb">Function</span><span class="p">,</span> <span class="c1">// activate a plugin</span>
+          <span class="nx">deactivate</span><span class="o">:</span> <span class="nb">Function</span>
+      <span class="p">});</span>
+<span class="p">});</span>
+</pre>
+</div>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">HTML.js maintained by <a href="https://github.com/drewyoung1">drewyoung1</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
