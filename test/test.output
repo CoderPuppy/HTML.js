@@ -1,0 +1,26 @@
+
+==================Running arrange=====================
+
+===================Arrange "<style></style><p></p>"=======================
+
+<!doctype html><html><head><style /></head><body><p /></body></html>
+
+===================Arrange "<body>body</body><head>head</head>"=======================
+
+<!doctype html><html><head>head</head><body>body</body></html>
+
+==================Done Running arrange=====================
+
+==================Running doctype=====================
+
+===================DocType "<!DOCTYPE html><html />"=======================
+
+<!doctype html><html /><head /><body /></html>
+
+===================DocType ""=======================
+
+<!doctype html><html><head /><body /></html>
+
+==================Done Running doctype=====================
+
+==================Done=====================
