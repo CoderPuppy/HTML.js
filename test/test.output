@@ -9,7 +9,7 @@
 
 <!doctype html><html><head>head</head><body>body</body></html>
 
-==================Done Running arrange=====================
+==================Done Running Arrange=====================
 
 ==================Running script=====================
 
@@ -45,7 +45,7 @@ LOG: [ { type: 'element',
        parentNode: [Object] } } ]
 <!doctype html><html><head><script>document.getElementsByTagName('body')[0].appendChild(document.createElement('div')).innerHTML = '<b>hi</b>';console.log(document.getElementsByTagName('div'));</script></head><body><div><b>hi</b></div></body></html>
 
-==================Done Running script=====================
+==================Done Running Script=====================
 
 ==================Running doctype=====================
 
@@ -57,6 +57,6 @@ LOG: [ { type: 'element',
 
 <!doctype html><html><head /><body /></html>
 
-==================Done Running doctype=====================
+==================Done Running DocType=====================
 
 ==================Done=====================
